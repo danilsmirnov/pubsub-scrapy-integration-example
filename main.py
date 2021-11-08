@@ -1,8 +1,8 @@
 from queue.pubsub import Publisher, Subscriber, Mediator
 
+
 class MockObject:
     name = 'mock object'
-
 
 
 if __name__ == '__main__':
@@ -11,4 +11,4 @@ if __name__ == '__main__':
     subscriber = Subscriber(mediator)
     subscriber.publisher.attach_to_object(mock_object)
     subscriber.send_message('Hello, World!')
-    subscriber.publisher.publish('connection', print(mock_object.name ,'connected'))
+    subscriber.publisher.publish('connection', print(mock_object.name, 'connected'))
